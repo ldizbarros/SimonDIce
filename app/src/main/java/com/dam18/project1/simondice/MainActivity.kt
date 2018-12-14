@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
         val sec:ArrayList<String> = ArrayList()
         var boton = ""
         for (i in 0..nivel -1 step 1) {
-            val x = Random().nextInt(3)
+            val x = Random().nextInt(4)
             when (x) {
                 0 -> boton="btnRojo"
                 1 -> boton="btnVerde"
@@ -126,7 +126,7 @@ class MainActivity : AppCompatActivity() {
 
         val handler3 = Handler()
         handler3.postDelayed({
-            toast("GO!")
+            //toast("GO!")
             go=true
         }, seg*secuencia.size+500)
     }
@@ -151,6 +151,7 @@ class MainActivity : AppCompatActivity() {
             toast("SECUENCIA CORRECTA!!!!")
         }else{
             toast("OH NO!! SECUENCIA INCORRECTA")
+            nivel=1
         }
         btnSec.setVisibility(View.INVISIBLE)
         secuenciaRecogida = ArrayList()
